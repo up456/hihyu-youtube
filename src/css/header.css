@@ -1,0 +1,141 @@
+li {
+  list-style: none;
+}
+
+header {
+  font-size: 1.4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .3em 1em;
+  background-color: #222;
+  color: #fff;
+}
+
+.left-menu {
+  display: flex;
+  min-width: 8em;
+  cursor: pointer;
+}
+.left-menu .logo {
+  margin-left: .9em;
+  display: flex;
+  align-items: center;
+}
+.logo .fa-youtube {
+  color: red;
+  font-size: 1.1em;
+  padding-top: .1em;
+}
+.logo .logo-country {
+  font-size: .4em;
+  color: #c0bfaf;
+  align-self: start;
+  padding-top: .2em;
+}
+
+.search-form {
+  display: flex;
+  min-width: 2em;
+  align-items: center;
+}
+.search-input{
+  background-color: black;
+  color: #fff;
+  font-size: .8em;
+  padding: .3em .3em;
+  min-width: 35vw;
+  border: .1px solid #444;
+  outline: none;
+}
+.search-input:focus-within {
+  border: 1px solid royalblue;
+}
+.btn-find-text {
+  background-color: #444;
+  font-size: 2em;
+  color: #fff;
+  font-size: .9em;
+  padding: .25em .9em;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  position: relative;
+}
+.btn-find-text::after {
+  content: "검색";
+  position: absolute;
+  transform: translate(-60%, 140%);
+  background-color: #666;
+  font-size: .5em;
+  width: 2em;
+  padding: 1.2em 1em;
+  visibility: hidden;
+  opacity: 0;
+  transition: 100ms ease-in;
+  cursor: auto;
+}
+.btn-find-text:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn-find-voice {
+  margin-left: .5em;
+  border-radius: 50%;
+  border:none;
+  background-color: black;
+  color: #fff;
+  font-size: .7em;
+  padding: .7em .85em;
+  cursor: pointer;
+  transition: all 1000ms;
+}
+.btn-find-voice::after {
+  content: "음성으로 검색";
+  position: absolute;
+  transform: translate(-60%, 140%);
+  background-color: #666;
+  font-size: .5em;
+  padding: 1.2em 1em;
+  visibility: hidden;
+  opacity: 0;
+  transition: 100ms ease-in;
+  cursor: auto;
+}
+.btn-find-voice:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.right-menu {
+  display: flex;
+  justify-content: space-between;
+  min-width: 3.5em;
+  cursor: pointer;
+}
+.btn-alarm {
+  font-size: .9em;
+}
+.btn-alarm::after {
+  content: "알림";
+  position: absolute;
+  transform: translate(-60%, 140%);
+  background-color: #666;
+  font-size: .5em;
+  padding: 1.2em 1em;
+  visibility: hidden;
+  opacity: 0;
+  transition: 100ms ease-in;
+  cursor: auto;
+}
+.btn-alarm:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+#profile-icon {
+  background-color: dodgerblue;
+  width: 1.35em;
+  height: 1.35em;
+  border-radius: 50%;
+}
