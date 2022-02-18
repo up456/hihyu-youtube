@@ -3,3 +3,19 @@
   margin: 0;
   padding: 0;
 }
+
+li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: 'oswald';
+  font-weight: 400;
+  src: url('../fonts/Oswald-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'oswald';
+  font-weight: 500;
+  src: url('../fonts/Oswald-SemiBold.ttf');
+}

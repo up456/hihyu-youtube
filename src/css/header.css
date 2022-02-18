@@ -1,5 +1,6 @@
-li {
-  list-style: none;
+
+body {
+  height: 1100px;
 }
 
 header {
@@ -7,9 +8,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .3em 1em;
+  padding: 0em 1em;
   background-color: #222;
   color: #fff;
+  position: fixed;
+  width: 100%;
+  height: 2.5em;
 }
 
 .left-menu {
@@ -18,20 +22,33 @@ header {
   cursor: pointer;
 }
 .left-menu .logo {
-  margin-left: .9em;
+  margin-left: 1.1em;
   display: flex;
   align-items: center;
+}
+.left-menu .logo::after {
+  content: "";
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  z-index: 1;
+  transform: translate(-700%);
 }
 .logo .fa-youtube {
   color: red;
   font-size: 1.1em;
   padding-top: .1em;
+  z-index: 2;
+}
+.logo .logo-title {
+  font-family: 'oswald';
+  font-size: .95em;
 }
 .logo .logo-country {
   font-size: .4em;
   color: #c0bfaf;
   align-self: start;
-  padding-top: .2em;
+  padding-left: .3em;
 }
 
 .search-form {
@@ -39,12 +56,18 @@ header {
   min-width: 2em;
   align-items: center;
 }
+#search-cancel {
+  background-color: #222;
+  margin-right: 1em;
+  cursor: pointer;
+  visibility: hidden;
+}
 .search-input{
   background-color: black;
   color: #fff;
   font-size: .8em;
   padding: .3em .3em;
-  min-width: 35vw;
+  width: 30em;
   border: .1px solid #444;
   outline: none;
 }
@@ -60,7 +83,6 @@ header {
   border: none;
   box-shadow: none;
   cursor: pointer;
-  position: relative;
 }
 .btn-find-text::after {
   content: "검색";
@@ -68,7 +90,6 @@ header {
   transform: translate(-60%, 140%);
   background-color: #666;
   font-size: .5em;
-  width: 2em;
   padding: 1.2em 1em;
   visibility: hidden;
   opacity: 0;
@@ -89,7 +110,6 @@ header {
   font-size: .7em;
   padding: .7em .85em;
   cursor: pointer;
-  transition: all 1000ms;
 }
 .btn-find-voice::after {
   content: "음성으로 검색";
@@ -111,8 +131,14 @@ header {
 .right-menu {
   display: flex;
   justify-content: space-between;
-  min-width: 3.5em;
+  min-width: 7.5em;
   cursor: pointer;
+}
+#search-hidden-icon {
+  visibility: hidden;
+}
+#search-hidden-icon .fa-microphone {
+  margin-left: 1.5em;
 }
 .btn-alarm {
   font-size: .9em;
@@ -138,4 +164,27 @@ header {
   width: 1.35em;
   height: 1.35em;
   border-radius: 50%;
+}
+
+@media (max-width:658px) {
+  .search-form {
+    visibility: hidden;
+  }
+  .search-form.click{
+    visibility: visible;
+    width: 90vw;
+    position:absolute;
+    z-index: 3;
+  }
+  #search-cancel.click {
+    visibility: visible;
+  }
+  .right-menu.click {
+    visibility: hidden;
+  }
+
+  #search-hidden-icon {
+    visibility: visible;
+  }
+  
 }
