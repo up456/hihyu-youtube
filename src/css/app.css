@@ -19,3 +19,15 @@ li {
   font-weight: 500;
   src: url('../fonts/Oswald-SemiBold.ttf');
 }
+#contents {
+  margin: 5em auto;
+  display: flex;
+  justify-content: center;
+  max-width: 80%;
+}
+
+@media (max-width: 1200px) {
+  #contents {
+    display: block;
+  }
+}

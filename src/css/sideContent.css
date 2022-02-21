@@ -1,0 +1,10 @@
+.side-content {
+  display: flex;
+  min-width: 300px;
+  
+}
+
+.side-video {
+  width: 180px;
+  height: 105px;
+}
